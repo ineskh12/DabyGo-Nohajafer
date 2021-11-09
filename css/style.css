@@ -1,6 +1,7 @@
 /* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM  ==== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
 /* ==== ROOT RESET ==== */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +11,7 @@
 *,
 *::before,
 *::after {
+  color:white;
   box-sizing: border-box;
 }
 
@@ -49,10 +51,13 @@ button {
   width: 100%;
 }
 .container-footer {
+  width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
 @media screen and (min-width: 1040px) {
@@ -75,6 +80,14 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
 }
 /* ==== LOGO ==== */
 .logo img {
@@ -136,7 +149,7 @@ button {
   right: 3% !important;
 }
 .showBlackColor {
-  color: black;
+  color:#5700ff ;
 }
 /* ====  WRAPPER ==== */
 .wrapper {
@@ -146,6 +159,90 @@ button {
   padding-top: 5rem;
   margin-bottom: rem;
 }
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-12,
+.col-lg-6,
+.col-lg-4,
+.col-lg-8 {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.bg-green-color {
+  width: 200px;
+  height: 50px;
+  background-color: #21eaa7;
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-transform: none;
+  letter-spacing: 1px;
+  transition: 0.4s;
+}
+
+#contact form#contactForm input[type="text"],
+#contact form#contactForm input[type="email"] {
+  min-height: 52px;
+  padding: 0px 0 0 28px;
+  font-size: 16px;
+  color: #5c08ff;
+  background-color: #ffffff;
+}
+
+#contact form#contactForm input[type="text"]::placeholder,
+#contact form#contactForm input[type="email"]::placeholder {
+  color: #5c08ff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#contact form#contactForm textarea::placeholder {
+  color: #5c08ff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.pl-3 {
+  padding-left: 3em;
+}
+
+.mt-1 {
+  margin-top: 1em;
+}
+
+.my-3 {
+  margin-top: -3em;
+  margin-bottom: 3em;
+  color: #ffffff;
+}
+
+#contact form#contactForm textarea {
+  height: 6em;
+  padding: 15px 0 0 28px;
+  font-size: 16px;
+  color: #5c08ff;
+  background-color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
 .grid-cols-2 {
   width: 100%;
   height: 100%;
@@ -220,7 +317,6 @@ button {
   transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-
 .grid-item-2 {
   width: 100%;
 }
@@ -261,8 +357,8 @@ button {
   line-height: 40px;
 }
 .icon img {
-  width: 100%;
-  height: 100%;
+  width: 73%;
+  height: 50%;
   color: #6b85d8;
 }
 .featured_info {
@@ -296,24 +392,44 @@ footer {
 }
 
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /*   margin-right: -15px;
+  margin-left: -15px; */
 }
 
+
 /* ==== MEDIA QURIES FOR RESPONSIVE DESIGN ==== */
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
   .container-footer {
     width: 1170px;
   }
 }
 
-@media screen and (min-width: 769px) /* and (height: 768px) */ {
+@media screen and (height: 769px) {
   .toggle_btn {
     display: none;
   }
 
   .logo img {
     width: 30%;
+  }
+}
+
+@media (min-width: 768px) /* and (height: 768px) */ {
+  
+  .col-md-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .col-md-12 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
@@ -350,6 +466,7 @@ footer {
     font-size: 15px;
   }
   .close_btn {
+  
     display: block;
     position: absolute;
     right: 10%;
@@ -436,11 +553,11 @@ footer {
     margin-top: 10px;
   }
 
-  .form-control{
+  .form-control {
     width: 50%;
   }
 
-  .color-blue{
+  .color-blue {
     margin: 0 auto;
   }
 
@@ -485,6 +602,26 @@ footer {
   .logo img {
     width: 40%;
     margin-top: 10px;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+
+  .col-lg-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+  }
+
+  .col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 

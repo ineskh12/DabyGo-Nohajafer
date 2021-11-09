@@ -2,6 +2,12 @@ const navId = document.getElementById("nav_menu"),
   ToggleBtnId = document.getElementById("toggle_btn"),
   navMenuLink = document.getElementsByClassName("nav_menu_link"),
   CloseBtnId = document.getElementById("close_btn");
+Présentation = document.getElementById("Présentation");
+ccm = document.getElementById("ccm");
+Fonctionnalités = document.getElementById("Fonctionnalités");
+Equipe = document.getElementById("Equipe");
+Contact = document.getElementById("Contact");
+
 
 // ==== SHOW MENU ==== //
 ToggleBtnId.addEventListener("click", () => {
@@ -19,6 +25,44 @@ CloseBtnId.addEventListener("click", () => {
     navMenuLink[i].className += "nav_menu_link";
   }
 });
+
+Présentation.addEventListener("click", () => {
+  
+  navId.classList.remove("show");
+  for (var i = 0; i < navMenuLink.length; i++) {
+    navMenuLink[i].className += "nav_menu_link";
+  }
+});
+ccm.addEventListener("click", () => {
+  
+  navId.classList.remove("show");
+  for (var i = 0; i < navMenuLink.length; i++) {
+    navMenuLink[i].className += "nav_menu_link";
+  }
+});
+Fonctionnalités.addEventListener("click", () => {
+  
+  navId.classList.remove("show");
+  for (var i = 0; i < navMenuLink.length; i++) {
+    navMenuLink[i].className += "nav_menu_link";
+  }
+});
+Equipe.addEventListener("click", () => {
+  
+  navId.classList.remove("show");
+  for (var i = 0; i < navMenuLink.length; i++) {
+    navMenuLink[i].className += "nav_menu_link";
+  }
+});
+Contact.addEventListener("click", () => {
+  
+  navId.classList.remove("show");
+  for (var i = 0; i < navMenuLink.length; i++) {
+    navMenuLink[i].className += "nav_menu_link";
+  }
+});
+
+
 
 // ==== Animate on Scroll Initialize  ==== //
 AOS.init();

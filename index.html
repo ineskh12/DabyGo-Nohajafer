@@ -19,7 +19,7 @@
 
 <body>
   <!-- ==== HEADER ==== -->
-  <header class="header" style="background-color: #5700ff;">
+  <header class="header fixed-top" style="background-color: #5700ff;">
     <!-- ==== NAVBAR ==== -->
     <nav class="nav">
       <div class="logo">
@@ -34,19 +34,19 @@
 
         <ul class="nav_menu_list">
           <li class="nav_menu_item">
-            <a href="#home-page" class="nav_menu_link">Présentation</a>
+            <a href="#home-page" id='Présentation' class="nav_menu_link">Présentation</a>
           </li>
           <li class="nav_menu_item">
-            <a href="#comment" class="nav_menu_link">Comment ça marche?</a>
+            <a href="#comment" id='ccm' class="nav_menu_link">Comment ça marche?</a>
           </li>
           <li class="nav_menu_item">
-            <a href="#fonctionnalie" class="nav_menu_link">Fonctionnalités</a>
+            <a href="#fonctionnalie" id='Fonctionnalités' class="nav_menu_link">Fonctionnalités</a>
           </li>
           <li class="nav_menu_item">
-            <a href="#equipe" class="nav_menu_link">Equipe</a>
+            <a href="#equipe" id='Equipe' class="nav_menu_link">Equipe</a>
           </li>
           <li class="nav_menu_item">
-            <a href="#contact" class="nav_menu_link">Contact</a>
+            <a href="#contact" id='Contact' class="nav_menu_link">Contact</a>
           </li>
         </ul>
       </div>
@@ -130,9 +130,9 @@
           <div class="featured_info">
 
             <p style="text-align: right; color:#5700ff">
-             En choisissant le DAB , le trajet le plus<br />
-              court s’affiche  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
-              (à pied ou mm en voiture )  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+              En choisissant le DAB , le trajet le plus<br />
+              court s’affiche &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+              (à pied ou mm en voiture ) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
 
           </div>
         </div>
@@ -152,9 +152,9 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
-              Système GPS pour <br />
-              les DAB en service ;<br />
+            <p style="text-align: left;">
+              &nbsp; &nbsp; &nbsp; &nbsp; Système GPS pour <br />
+              &nbsp; &nbsp; &nbsp; &nbsp;les DAB en service ;<br />
               répondre à un besoin urgent <br /> </p>
           </div>
         </div>
@@ -167,8 +167,8 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
-              Indique le chemin le plus court à <br />
+            <p style="text-align: left;">
+              &nbsp; &nbsp; Indique le chemin le plus court à <br />
               prendre ; système de géolocalisation<br />
             </p>
           </div>
@@ -182,8 +182,8 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
-              Un système de notification sms <br />
+            <p style="text-align: left;">
+              &nbsp; &nbsp;  Un système de notification sms <br />
               quand le DAB choisi revient en service<br />
             </p>
           </div>
@@ -197,8 +197,8 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
-              Spécificité de chaque DAB, à <br />
+            <p style="text-align: left;">
+              &nbsp; &nbsp;  Spécificité de chaque DAB, à <br />
               savoir le plafond max par opération<br />
               <br />
             </p>
@@ -212,9 +212,9 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
+            <p style="text-align: left;">
               Un coin d’avis et de réclamation client <br />
-              pour les DAB utilisé<br />
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pour les DAB utilisé<br />
             </p>
           </div>
         </div>
@@ -227,10 +227,10 @@
           </div>
 
           <div class="featured_info">
-            <p style="text-align: center;">
+            <p style="text-align: left;">
               Publicité de jour ou de mois pour<br />
-              chaque banque qui<br />
-              s’affiche sur le DAB choisi <br /> </p>
+              &nbsp; &nbsp; &nbsp; &nbsp;  chaque banque qui<br />
+              &nbsp; &nbsp; &nbsp;s’affiche sur le DAB choisi <br /> </p>
           </div>
         </div>
 
@@ -270,7 +270,68 @@
     </div>
   </section>
 
-  <footer class="footer-area" id='contact'>
+
+  <section class="footer-area" id='contact'>
+    <div class="color-blue">
+      <div class="container-footer" >
+        <div class="row">
+          <div class="col-lg-4 my-3 pl-3">
+            <h1>Contactez-nous</h1>
+            <p>Contact@dabygo.com</p>
+          </div>
+          <div class="col-lg-8">
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control disable-radius" id="name" name="name" placeholder="Nom"
+                      required="" data-error="Please enter your name">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input type="text" placeholder="Prénom" id="msg_subject" class="form-control disable-radius"
+                      name="msg_subject" required="" data-error="Please enter your subject">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input type="text" class="form-control disable-radius" id="email" name="email" placeholder="Objet"
+                      required="" data-error="Please enter your Email">
+                    <div class="help-block with-errors"></div>
+                  </div>
+                </div>
+                <!-- <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" placeholder="Budget" id="budget" class="form-control disable-radius" name="budget"
+                required data-error="Please enter your Budget">
+              <div class="help-block with-errors"></div>
+            </div>
+          </div> -->
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control disable-radius" id="message" name="message"
+                      placeholder="Votre message" rows="4" data-error="Write your message" required=""></textarea>
+                    <div class="help-block with-errors"></div>
+                  </div>
+                  <div class="submit-button d-flex justify-content-end">
+                    <button class="bg-green-color btn-common disable-radius" id="submit" type="submit">Envoyer</button>
+                    <div id="msgSubmit" class="h3 hidden"></div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--  <footer class="footer-area" id='contact'>
     <div class="color-blue">
       <div class="container-footer" style="padding-top: 120px; padding-bottom: 100px;">
 
@@ -315,7 +376,7 @@
 
       </div>
     </div>
-  </footer>
+  </footer> -->
 
 
   <!-- ==== ANIMATE ON SCROLL JS CDN -->
