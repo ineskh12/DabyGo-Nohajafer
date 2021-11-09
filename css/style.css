@@ -317,6 +317,7 @@ textarea {
 }
 
 .grid-item-2 {
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -532,6 +533,7 @@ footer {
   }
   .grid-item-2 {
     order: 1;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
