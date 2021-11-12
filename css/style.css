@@ -61,7 +61,7 @@ button {
 
 @media screen and (min-width: 1040px) {
   .container {
-    width: 1040px;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -122,6 +122,7 @@ button {
   justify-content: right;
 }
 .nav_menu_list .nav_menu_item {
+  
   margin: 0 0.5rem;
 }
 .nav_menu_link {
@@ -135,9 +136,10 @@ button {
   color: white;
 } */
 .toggle_btn {
+  
   font-size: 20px;
   font-weight: 600;
-  color:white;
+  color: var(--lg-heading);
   z-index: 4;
 }
 .nav_menu,
@@ -148,7 +150,7 @@ button {
   right: 3% !important;
 }
 .showBlackColor {
-  color: #5700ff;
+  color: black;
 }
 /* ====  WRAPPER ==== */
 .wrapper {
@@ -251,7 +253,6 @@ textarea {
 }
 .grid-item-1 {
   padding-top: 5rem;
-  padding-left: 1.5rem;
 }
 .main-heading {
   font-weight: 300;
@@ -259,14 +260,14 @@ textarea {
   line-height: 55px;
 }
 .main-heading span {
-  font-size:bold ;
   /* color: var(--primary-color); */
   color: #33d1b9;
+  font-size: 2em;
 }
 .info-text {
   margin-top: 1.5rem;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 24px;
+  line-height: 50px;
   color: #5700ff;
 }
 .btn_wrapper {
@@ -318,7 +319,6 @@ textarea {
 }
 
 .grid-item-2 {
-  margin-top: 20px;
   width: 100%;
 }
 
@@ -335,9 +335,9 @@ textarea {
   width: 400px;
   max-width: 100%;
   height: 440px;
+  margin-left: 20%;
 }
 .team_img_wrapper img {
-  margin-top: 15px;
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -355,12 +355,11 @@ textarea {
   height: 100%;
 }
 .icon {
-  width: 100%;
+  width: 80%;
   line-height: 40px;
 }
 .icon img {
-  margin-left: 50px;
-  width: 70%;
+  width: 100%;
   height: 100%;
   color: #6b85d8;
 }
@@ -403,11 +402,10 @@ footer {
   margin-left: -15px; */
 }
 
-
 /* ==== MEDIA QURIES FOR RESPONSIVE DESIGN ==== */
 @media (min-width: 1200px) {
   .container-footer {
-    width: 1170px;
+    width: 1300px;
   }
 }
 
@@ -422,7 +420,6 @@ footer {
 }
 
 @media (min-width: 768px) /* and (height: 768px) */ {
-  
   .col-md-6 {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
@@ -466,6 +463,7 @@ footer {
     margin: 1rem 0;
   }
   .nav_menu_item .nav_menu_link {
+    color: #5700ff;
     font-size: 15px;
   }
   .close_btn {
@@ -473,10 +471,10 @@ footer {
     position: absolute;
     right: 10%;
     font-size: 25px;
-    color: #5c08ff;
+    color: #50689e;
   }
   .close_btn:hover {
-    color: #5c08ff;
+    color: #000;
   }
   .wrapper {
     padding: 0 0.7rem;
@@ -497,12 +495,15 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
   .featured_info p {
-    line-height: 23px;
-    font-size: 14px;
+    line-height: 50px;
+    font-size: 30px;
   }
 }
 
 @media screen and (max-width: 991px) {
+  .team_img_wrapper {
+    margin-left: 0;
+  }
   .wrapper {
     padding-top: 3rem;
   }
@@ -523,7 +524,7 @@ footer {
     line-height: 40px;
   }
   .info-text {
-    font-size: 16px;
+    font-size: 25px;
     text-align: center;
     padding: 0.7rem;
   }
@@ -539,6 +540,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 30px;
   }
   .team_img_wrapper {
     width: 350px;
