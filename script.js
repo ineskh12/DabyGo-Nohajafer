@@ -7,12 +7,13 @@ ccm = document.getElementById("ccm");
 Fonctionnalités = document.getElementById("Fonctionnalités");
 Equipe = document.getElementById("Equipe");
 Contact = document.getElementById("Contact");
-
+let index
 
 // ==== SHOW MENU ==== //
 ToggleBtnId.addEventListener("click", () => {
   navId.classList.add("show");
   for (var i = 0; i < navMenuLink.length; i++) {
+    if (i !== index)
     navMenuLink[i].className += " showBlackColor";
   }
   //navMenuLink.classList.add("showBlackColor");
@@ -27,38 +28,48 @@ CloseBtnId.addEventListener("click", () => {
 });
 
 Présentation.addEventListener("click", () => {
-  
+  index=0
   navId.classList.remove("show");
+  Présentation.className = "nav_menu_link active"
   for (var i = 0; i < navMenuLink.length; i++) {
-    navMenuLink[i].className += "nav_menu_link";
+    if (i !== 0)
+      navMenuLink[i].className = "nav_menu_link";
   }
 });
 ccm.addEventListener("click", () => {
-  
+  index=1
   navId.classList.remove("show");
+  ccm.className = "nav_menu_link active"
   for (var i = 0; i < navMenuLink.length; i++) {
-    navMenuLink[i].className += "nav_menu_link";
+    if (i !== 1)
+      navMenuLink[i].className = "nav_menu_link";
   }
 });
 Fonctionnalités.addEventListener("click", () => {
-  
+  index=2
   navId.classList.remove("show");
+  Fonctionnalités.className = "nav_menu_link active"
   for (var i = 0; i < navMenuLink.length; i++) {
-    navMenuLink[i].className += "nav_menu_link";
+    if (i !== 2)
+    navMenuLink[i].className = "nav_menu_link";
   }
 });
 Equipe.addEventListener("click", () => {
-  
+  index=3
   navId.classList.remove("show");
+  Equipe.className = "nav_menu_link active"
   for (var i = 0; i < navMenuLink.length; i++) {
-    navMenuLink[i].className += "nav_menu_link";
+    if (i !== 3)
+    navMenuLink[i].className = "nav_menu_link";
   }
 });
 Contact.addEventListener("click", () => {
-  
+  index=4
   navId.classList.remove("show");
+  Contact.className = "nav_menu_link active"
   for (var i = 0; i < navMenuLink.length; i++) {
-    navMenuLink[i].className += "nav_menu_link";
+    if (i !== 4)
+    navMenuLink[i].className = "nav_menu_link";
   }
 });
 
@@ -113,6 +124,12 @@ gsap.from(".btn_wrapper", {
 });
 // ==== TEAM IMAGE ==== //
 gsap.from(".team_img_wrapper img", {
+  opacity: 0,
+  y: 20,
+  delay: 3,
+  duration: 0.3,
+});
+gsap.from(".team_img_wrapper_2 img", {
   opacity: 0,
   y: 20,
   delay: 3,
